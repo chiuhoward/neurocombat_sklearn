@@ -188,7 +188,7 @@ class CombatModel(BaseEstimator):
 
         # Sites
         if fitting:
-            self.site_encoder = OneHotEncoder(sparse=False)
+            self.site_encoder = OneHotEncoder(sparse_output=False)
             self.site_encoder.fit(sites)
 
         sites_design = self.site_encoder.transform(sites)
